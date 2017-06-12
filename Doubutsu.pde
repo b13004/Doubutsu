@@ -1,28 +1,14 @@
 final int SQUARESIZE = 100;
 Board board;
+KomaList komaList;
 
 void setup() {
   surface.setSize(6*SQUARESIZE, 4*SQUARESIZE);
   board = new Board();
+  komaList = new KomaList();
 }
 
 void draw() {
   board.draw();
-}
-
-
-
-abstract class AbstractArea {
-  int posX;
-  int posY;
-  int tate;
-  int yoko;
-  AbstractArea(int posX, int posY, int yoko, int tate) {
-    this.posX = posX;
-    this.posY = posY;
-    this.yoko = yoko;
-    this.tate = tate;
-  }
-  abstract void draw();
-
+  komaList.draw();
 }
